@@ -12,7 +12,7 @@
 #include <iostream>
 
 using namespace std;
-int n,j,k;
+int n;
 int a[50];
 
 void sort(void);
@@ -46,6 +46,7 @@ int main(void){
     Octuber 2025
 */
 
+int j;
 void sort(void){
     for(j = 1; j<= n-1;j++)
     {
@@ -67,6 +68,7 @@ void sort(void){
     Compiler: MinGW G++
     OCtober 2025
 */
+int k;
 void move(void){
     int temp = a[j+1];
     a[j+1] = a[j];
