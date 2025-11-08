@@ -3,13 +3,12 @@
 
 #include <iostream>
 #include <vector>
+#include <rsquare.h>
 using namespace std;
-
-void create_square(vector<char>);
 
 int main(void){
     int k,temp;
-    vector<char> chars = {};
+    vector<char> characters = {};
 
     cout<<"Please enter a size for the square "<<endl;
     cin>>k;
@@ -17,15 +16,12 @@ int main(void){
     for(int i = 0; i < k; i++){
         cout<<"Character "<<i;
         cin>>temp;
-        chars.push_back(temp);
+        characters.push_back(temp);
     }
 
-    // create_square(chars);
+    rsquare square(characters, k);
+    square.createSquare(square.lower,square.upper);
+    square.print();
 
     return 0;
-}
-
-void create_square(vector<char> chars) {
-    
-    return;
 }

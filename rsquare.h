@@ -6,8 +6,6 @@ class rsquare{
     public:
     vector<char> characters;
     vector<vector<char>> display;
-    vector<char> vec;
-    int length = characters.size();
     int lower, upper;
 
     rsquare(vector<char> x, int k){
