@@ -55,6 +55,8 @@ void dictSearch(const string fileName)
     fileIn.open(fileName.data());
     assert(fileIn.is_open());
 
+    // testing for 'a'
+
     while(fileIn>>curWord)
     {
         fChar = curWord.at(0);
