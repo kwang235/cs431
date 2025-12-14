@@ -59,6 +59,7 @@ void dictSearch(const string fileName)
 
     while(fileIn>>curWord)
     {
+        if(!curWord.empty()){
         fChar = curWord.at(0);
         if(fChar == 'd' || fChar == 'D'){
             if(dWordCounts.count(curWord) == 0){
@@ -69,13 +70,14 @@ void dictSearch(const string fileName)
             }
         }
         else{
-            if(dWordCounts.count(curWord) == 0){
+            if(wordCounts.count(curWord) == 0){
                 wordCounts[curWord] = 1;
             }
             else{
                 wordCounts[curWord]++;
             }
         }
+    }
     }
 
     cout<<"The words beginning in D are: "<<endl;
@@ -88,8 +90,9 @@ void dictSearch(const string fileName)
     i = 1;
     cout<<"The remaining words are: "<<endl;
     for(auto word : wordCounts) {
-        cout<< "Word "<<i<<" is "<<word.first<<" repeated "<< word.second<<" times"<<endl;
+        cout<< "Word "<<i<<" is \""<<word.first<<"\" repeated "<< word.second<<" times"<<endl;
         i++;
     }
+    
 
 }
